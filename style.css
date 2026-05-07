@@ -1,0 +1,375 @@
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      height:70px;
+      background:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 30px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav h1{
+      font-size:26px;
+      color:#2563eb;
+    }
+
+    nav span{
+      color:#111;
+    }
+
+    /* SEARCH */
+
+    .search-box{
+      width:250px;
+      position:relative;
+    }
+
+    .search-box input{
+      width:100%;
+      padding:11px 40px 11px 15px;
+      border:none;
+      border-radius:10px;
+      background:#f1f5f9;
+      outline:none;
+    }
+
+    .search-box i{
+      position:absolute;
+      right:14px;
+      top:50%;
+      transform:translateY(-50%);
+      color:#666;
+    }
+
+    /* MAIN */
+
+    .container{
+      width:95%;
+      margin:20px auto;
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+    }
+
+    /* FORM */
+
+    .form-box{
+      width:300px;
+      background:white;
+      padding:20px;
+      border-radius:14px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:20px;
+    }
+
+    .form-box h2{
+      margin-bottom:15px;
+    }
+
+    input,
+    textarea,
+    select{
+      width:100%;
+      padding:12px;
+      border:1px solid #ddd;
+      border-radius:10px;
+      margin-bottom:14px;
+      outline:none;
+      background:#fafafa;
+    }
+
+    textarea{
+      resize:none;
+      height:80px;
+    }
+
+    /* IMAGE */
+
+    .upload-box{
+      width:100%;
+      height:130px;
+      border:2px dashed #2563eb;
+      border-radius:12px;
+      background:#eff6ff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+      overflow:hidden;
+      margin-bottom:15px;
+      position:relative;
+    }
+
+    .upload-box i{
+      font-size:30px;
+      color:#2563eb;
+      margin-bottom:8px;
+    }
+
+    .preview-image{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:none;
+      background:white;
+      padding:5px;
+    }
+
+    .add-btn{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      background:#2563eb;
+      color:white;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    /* PRODUCTS */
+
+    .products{
+      flex:1;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    /* CARD */
+
+    .card{
+      width:165px;
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+      animation:show 0.4s ease;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .slider{
+      width:100%;
+      height:110px;
+      position:relative;
+      overflow:hidden;
+      background:white;
+    }
+
+    .slider img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:5px;
+    }
+
+    .slide-btn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:22px;
+      height:22px;
+      border:none;
+      border-radius:50%;
+      background:white;
+      cursor:pointer;
+      font-size:10px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .prev{
+      left:5px;
+    }
+
+    .next{
+      right:5px;
+    }
+
+    .card-content{
+      padding:8px;
+    }
+
+    .card-content h3{
+      font-size:12px;
+      margin-bottom:5px;
+    }
+
+    .price{
+      color:#2563eb;
+      font-size:13px;
+      font-weight:bold;
+      margin-bottom:5px;
+    }
+
+    .category{
+      font-size:10px;
+      color:#666;
+      margin-bottom:5px;
+    }
+
+    .card-content p{
+      font-size:10px;
+      color:#666;
+      margin-bottom:8px;
+      height:28px;
+      overflow:hidden;
+    }
+
+    /* ACTIONS */
+
+    .actions{
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .icon-btn{
+      width:26px;
+      height:26px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:10px;
+    }
+
+    .edit-btn{
+      background:#dbeafe;
+      color:#2563eb;
+    }
+
+    .delete-btn{
+      background:#fee2e2;
+      color:#dc2626;
+    }
+
+    .more-btn{
+      background:#dcfce7;
+      color:#16a34a;
+    }
+
+    /* CUSTOM ALERT */
+
+    .alert-box{
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:320px;
+      background:white;
+      padding:25px;
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      text-align:center;
+      z-index:999;
+      display:none;
+      animation:popup 0.3s ease;
+    }
+
+    .alert-box i{
+      font-size:45px;
+      color:#dc2626;
+      margin-bottom:12px;
+    }
+
+    .alert-box h2{
+      margin-bottom:10px;
+    }
+
+    .alert-buttons{
+      display:flex;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .alert-buttons button{
+      flex:1;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    .cancel-btn{
+      background:#e5e7eb;
+    }
+
+    .confirm-btn{
+      background:#dc2626;
+      color:white;
+    }
+
+    /* EDIT MODAL */
+
+    .edit-modal{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.4);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:1000;
+    }
+
+    .edit-box{
+      width:350px;
+      background:white;
+      padding:20px;
+      border-radius:14px;
+      animation:popup 0.3s ease;
+    }
+
+    .edit-box h2{
+      margin-bottom:15px;
+    }
+
+    .save-btn{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      background:#2563eb;
+      color:white;
+      cursor:pointer;
+    }
+
+    /* ANIMATION */
+
+    @keyframes show{
+      from{
+        opacity:0;
+        transform:scale(0.8);
+      }
+      to{
+        opacity:1;
+        transform:scale(1);
+      }
+    }
+
+    @keyframes popup{
+      from{
+        opacity:0;
+        transform:scale(0.7);
+      }
+      to{
+        opacity:1;
+        transform:scale(1);
+      }
+    }
